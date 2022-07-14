@@ -1,0 +1,24 @@
+.header-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.home-content {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 35px;
+}
+
+.home-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #c08c3f;
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+
+.recipes-list {
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}

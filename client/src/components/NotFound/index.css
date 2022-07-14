@@ -1,0 +1,30 @@
+.not-found-content{
+    min-height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-top: 7vh;
+}
+.not-found-image{
+    width: 400px;
+}
+.not-found-title{
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+.not-found-description{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.not-found-button{
+    background-color: #4b5cf1;
+    border: 0px;
+    color: #ffffff;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}

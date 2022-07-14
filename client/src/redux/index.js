@@ -1,0 +1,1 @@
+export { updateSearchInput } from './search/searchActions'

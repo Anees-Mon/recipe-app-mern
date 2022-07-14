@@ -1,0 +1,94 @@
+.details-container {
+    min-height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 7vh;
+}
+
+.details-heading-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.details-heading {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #ff7700, #ff0055);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.details-buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+.details-link {
+    text-decoration: none;
+}
+
+.details-button {
+    display: flex;
+    align-items: center;
+    color: #444444;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid #858585;
+    border-radius: 5px;
+    padding: 4px 6px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #00aaff;
+    border-color: #00aaff;
+    color: #ffffff;
+}
+
+.delete-button:hover {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: #ffffff;
+}
+
+.details-icon {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.details-recipe-image {
+    width: 50%;
+    min-height: 400px;
+    align-self: center;
+    margin: auto;
+    margin-left: 30px;
+    box-shadow: 4px 5px 20px 1px #888888;
+
+}
+
+.sub-heading {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: #ff7700;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.details-content-container {
+    display: flex;
+    justify-content: space-between;
+}
