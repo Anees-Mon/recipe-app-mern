@@ -4,8 +4,6 @@ const { Sequelize } = require('sequelize');
 const mongoose = require('mongoose')
 
 const {RecipeListModel, RecipeDetailsModel} = require('./model')
-// const RecipeDetailsModel = require('./model')
-
 
 const db = new Sequelize('postgres://postgres:postgres@localhost:5432/recipes')
 const testDb = async () => {
@@ -34,13 +32,6 @@ app.get('/', (request, response) => {
 })
 
 app.get('/recipes-list', async (request, response) => {
-    /* pool.query('SELECT * FROM recipe ORDER BY id ASC', (error, resolve) => {
-        if (error) {
-            throw error
-        }
-        response.status(200).json(resolve.rows)
-    }) */
-
     try {
         const dbResponse = await RecipeListModel.findAll({ order: ['id'] })
         response.status(200).send(dbResponse)
@@ -52,15 +43,6 @@ app.get('/recipes-list', async (request, response) => {
 
 app.post('/recipes-list', async (request, response) => {
     const { name, image } = request.body
-    /* pool.query(`INSERT INTO
-    recipe (name, image)
-    VALUES ('${name}', '${image}')
-    RETURNING id`, (error, resolve) => {
-        if (error) {
-            throw error
-        }
-        response.status(201).json({ id: resolve.rows[0].id })
-    }) */
     try {
         const dbResponse = await RecipeListModel.create({ name, image })
         response.status(201).json({ id: dbResponse.id })
@@ -73,12 +55,6 @@ app.post('/recipes-list', async (request, response) => {
 
 app.delete('/recipes-list/:id', async (request, response) => {
     const { id } = request.params
-    /* pool.query(`DELETE FROM recipe WHERE id=${id}`, (error, resolve) => {
-        if (error) {
-            throw error
-        }
-        response.status(200).send('Recipe deleted')
-    }) */
     try {
         const dbResponse = await RecipeListModel.destroy({
             where: { id, }
@@ -94,12 +70,6 @@ app.delete('/recipes-list/:id', async (request, response) => {
 app.put('/recipes-list/:id', async (request, response) => {
     const { id } = request.params
     const { name, image } = request.body
-    /* pool.query(`UPDATE recipe SET name='${name}', image='${image}' WHERE id= ${id}`, (error, resolve) => {
-        if (error) {
-            throw error
-        }
-        response.status(200).send('Recipe updated')
-    }) */
     try {
         const dbResponse = await RecipeListModel.update({ name, image }, {
             where: { id, }
@@ -112,28 +82,6 @@ app.put('/recipes-list/:id', async (request, response) => {
 
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 app.get('/recipe-details/:id', (request, response) => {
